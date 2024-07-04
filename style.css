@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.cinema {
+    text-align: center;
+}
+
+@keyframes glowing {
+    0% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5); }
+    50% { box-shadow: 0 0 30px rgba(255, 255, 255, 0.7), 0 0 60px rgba(255, 255, 255, 0.7); }
+    100% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5); }
+}
+
+.screen {
+    width: 700px;
+    height: 400px;
+    margin: 0 auto;
+    border: 5px solid #333;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-size: contain; /* Обеспечивает полное отображение изображения */
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5); /* Добавляет эффект свечения */
+    animation: glowing 2s infinite; /* Добавляет анимацию свечения */
+}
+
+.loading {
+    font-size: 24px;
+    display: none;
+}
+
+.movie-title {
+    font-size: 32px;
+    display: none;
+    position: absolute;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
